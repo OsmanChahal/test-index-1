@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>معهد الدعوة والإرشاد | لبنان</title>
+<meta name="description" content="معهد الدعوة والإرشاد في لبنان: علم شرعي رصين، وتربية على الأخلاق، وخدمة للمجتمع.">
+<link rel="icon" href="logo-mark.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f4ee;--surface:#fff;--ink:#0f2f26;--muted:#51655e;--line:#dcd8c8;
+  --brand:#0e4a38;--brand-ink:#fff;--gold:#b98a2b;--band:#0e4a38;--band-ink:#f6f4ee;--gold-on-band:#e2b955;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0b1713;--surface:#112621;--ink:#e9efeb;--muted:#9fb5ac;--line:#24403a;
+  --brand:#5cb597;--brand-ink:#0b1713;--gold:#e2b955;--band:#112621;--band-ink:#e9efeb;--gold-on-band:#e2b955}}
+:root[data-theme="dark"]{--bg:#0b1713;--surface:#112621;--ink:#e9efeb;--muted:#9fb5ac;--line:#24403a;--brand:#5cb597;--brand-ink:#0b1713;--gold:#e2b955;--band:#112621;--band-ink:#e9efeb;--gold-on-band:#e2b955}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.9 "IBM Plex Sans Arabic",Tahoma,"Segoe UI",system-ui,sans-serif}
+h1,h2,h3{font-family:Amiri,"Traditional Arabic",serif;line-height:1.45;margin:0;font-weight:700}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1120px;margin-inline:auto;padding-inline:20px}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header.top::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:-1}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font:700 1.35rem Amiri,serif}
+.brand img{width:46px;height:46px;border-radius:10px;background:#fff;border:1px solid var(--line);object-fit:contain}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+.nav ul a{text-decoration:none;color:var(--muted);font-weight:500}
+.nav ul a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--brand);color:var(--brand-ink);padding:11px 22px;border-radius:10px;font-weight:600;text-decoration:none;border:0;cursor:pointer;font-family:inherit}
+.btn:hover{filter:brightness(1.12)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.hero{padding-block:72px 80px}
+.hero-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.2rem,5.2vw,3.7rem)}
+.hero p{color:var(--muted);font-size:1.15rem;max-width:56ch;margin:20px 0 30px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.arch{justify-self:center;width:100%;max-width:380px;background:#fff;border:2px solid var(--gold);border-radius:999px 999px 28px 28px;padding:44px 28px 30px;box-shadow:0 0 0 9px var(--bg),0 0 0 11px var(--line)}
+.arch img{display:block;width:100%;height:auto}
+.stats{background:var(--band);color:var(--band-ink);padding-block:48px}
+.stats ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center}
+.stats li+li{border-inline-start:1px solid rgba(255,255,255,.18)}
+.num{font:700 clamp(2.4rem,6vw,3.8rem)/1.2 Amiri,serif;color:var(--gold-on-band);font-variant-numeric:tabular-nums}
+.lbl{opacity:.92}
+section.block{padding-block:80px}
+.head{margin-bottom:32px}
+.head h2,.split h2{font-size:clamp(1.8rem,3.6vw,2.5rem)}
+.head p{margin:6px 0 0;color:var(--muted)}
+.split{display:grid;grid-template-columns:1fr 1.4fr;gap:48px}
+.split p{color:var(--muted);margin:0 0 16px;max-width:62ch}
+.programs{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--surface)}
+.programs article{padding:30px 28px}
+.programs article+article{border-inline-start:1px solid var(--line)}
+.programs h3{font-size:1.45rem;color:var(--brand);margin-bottom:8px}
+.programs p{margin:0;color:var(--muted)}
+.articles{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:22px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:10px;text-decoration:none;border-top:3px solid var(--gold)}
+.card:hover{border-color:var(--brand);border-top-color:var(--brand)}
+.card h3{font-size:1.35rem}
+.card p{margin:0;color:var(--muted);flex:1}
+.meta{font-size:.88rem;color:var(--muted)}
+.empty{border:1.5px dashed var(--line);border-radius:14px;padding:32px;color:var(--muted);text-align:center}
+.contact{background:var(--surface);border-block:1px solid var(--line)}
+.contact dl{margin:0 0 24px;display:grid;grid-template-columns:auto 1fr;gap:8px 20px;color:var(--muted)}
+.contact dt{font-weight:600;color:var(--ink)}
+.contact dd{margin:0}
+footer{padding-block:30px;color:var(--muted);font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media (max-width:820px){
+  .nav ul{display:none}
+  .hero-grid,.split{grid-template-columns:1fr}
+  .arch{max-width:260px;order:-1;padding:34px 20px 22px}
+  .stats ul{grid-template-columns:1fr}
+  .stats li+li{border-inline-start:0;border-top:1px solid rgba(255,255,255,.18);padding-top:20px}
+  .programs{grid-template-columns:1fr}
+  .programs article+article{border-inline-start:0;border-top:1px solid var(--line)}
+  .hero{padding-block:36px 52px}
+  section.block{padding-block:52px}
+  .brand span{font-size:1.1rem}
+  .btn{padding:10px 14px;font-size:.92rem}
+}
+@media (max-width:420px){.brand span{display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap nav">
+    <a class="brand" href="#top"><img src="logo-mark.jpg" alt=""><span id="brandName">معهد الدعوة والإرشاد</span></a>
+    <ul>
+      <li><a href="#about">عن المعهد</a></li>
+      <li><a href="#programs">برامجنا</a></li>
+      <li><a href="#articles">المقالات</a></li>
+      <li><a href="#contact">تواصل معنا</a></li>
+    </ul>
+    <a class="btn" id="lmsLink" href="https://lms.mahadaldawa.com">دخول الطلاب والمعلمين</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>علمٌ يُبنى على الأخلاق، ودعوةٌ تبدأ من القدوة.</h1>
+        <p>منذ أكثر من اثني عشر عامًا يجمع معهد الدعوة والإرشاد في لبنان بين التأصيل العلمي والتربية والعمل المجتمعي. وفي منصة واحدة يتابع الطلاب والمعلمون وأولياء الأمور الدروس والدرجات والإعلانات.</p>
+        <div class="actions">
+          <a class="btn" href="#contact">سجّل اهتمامك بالالتحاق</a>
+          <a class="btn ghost" href="#articles">اقرأ مقالاتنا</a>
+        </div>
+      </div>
+      <div class="arch"><img src="logo.jpg" alt="شعار معهد الدعوة والإرشاد – لبنان" width="900" height="838"></div>
+    </div>
+  </section>
+
+  <section class="stats" aria-label="المعهد بالأرقام"><div class="wrap"><ul id="stats"></ul></div></section>
+
+  <section class="block" id="about">
+    <div class="wrap split">
+      <h2>عن المعهد</h2>
+      <div>
+        <p>تأسس المعهد ليكون بيتًا للعلم الشرعي الرصين وإعداد الدعاة والمرشدين، يجمع بين التعلّم من الكتاب والسنة وبين فهم حاجات المجتمع اللبناني اليوم.</p>
+        <p>نؤمن أن الداعية الناجح يبدأ بطالب علم صادق، لذلك نعرف كل طالب باسمه، ونتابع مسيرته علميًا وتربويًا حتى يصبح نفعًا لأهله ومجتمعه.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="programs" style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><h2>ما نقدّمه</h2><p>ثلاثة مسارات تكمل بعضها.</p></div>
+      <div class="programs">
+        <article><h3>الدراسة الشرعية</h3><p>دروس منتظمة في العقيدة والفقه والتفسير والحديث واللغة العربية، بمنهج متدرج.</p></article>
+        <article><h3>إعداد الدعاة</h3><p>دورات في مهارات الخطابة والحوار وفقه الواقع، مع تدريب عملي على الدعوة.</p></article>
+        <article><h3>الإرشاد والمجتمع</h3><p>برامج توعية وإصلاح اجتماعي وأنشطة تطوعية تخدم الأسر والشباب.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="articles" style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><h2>أحدث المقالات</h2><p>أخبار وتأملات وتحديثات من أساتذتنا.</p></div>
+      <div class="articles" id="articleList"></div>
+    </div>
+  </section>
+
+  <section class="block contact" id="contact">
+    <div class="wrap split">
+      <h2>تواصل معنا</h2>
+      <div>
+        <dl id="contactInfo"></dl>
+        <a class="btn" id="lmsLink2" href="https://lms.mahadaldawa.com/login">افتح منصة التعلّم</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span id="foot"></span><span>بدعم من نظام معهد الدعوة والإرشاد للتعلّم</span></div></footer>
+
+<script>
+/* ===== عدّل المحتوى هنا فقط. لاحقًا يمكن استبدال CONFIG بطلب fetch('/api/site') ===== */
+const CONFIG = {
+  name: "معهد الدعوة والإرشاد",
+  lmsUrl: "https://lms.mahadaldawa.com",
+  contact: [
+    ["البريد", "info@mahadaldawa.com"],
+    ["الهاتف", "+961 XX XXX XXX"],
+    ["العنوان", "لبنان"]
+  ],
+  stats: [
+    { value: 999, label: "طالب وطالبة حاليًا" },
+    { value: 2000, label: "خريج وخريجة" },
+    { value: 12, label: "عامًا من الخبرة" }
+  ],
+  // اتركها فارغة لعرض رسالة "لا توجد مقالات".
+  articles: [
+    { title: "كيف نهيّئ الطلاب للاختبارات دون توتر", excerpt: "يشارك أساتذتنا الروتين الأسبوعي الذي يحافظ على هدوء الطلاب وانتظامهم.", date: "2026-09-20", author: "الفريق الأكاديمي", url: "#" },
+    { title: "دليل ولي الأمر إلى منصة التعلّم الجديدة", excerpt: "أين تجد الدرجات والحضور والواجبات، خطوة بخطوة.", date: "2026-09-12", author: "الإدارة", url: "#" },
+    { title: "لماذا تبقى القراءة الجهرية مهمة؟", excerpt: "عادات يومية صغيرة تبني الطلاقة والثقة بالنفس.", date: "2026-09-02", author: "الأستاذة سارة", url: "#" }
+  ]
+};
+
+const el = id => document.getElementById(id);
+const nf = new Intl.NumberFormat("ar");
+document.title = CONFIG.name + " | لبنان";
+el("brandName").textContent = CONFIG.name;
+["lmsLink","lmsLink2"].forEach(i => el(i).href = CONFIG.lmsUrl);
+el("foot").textContent = "© " + nf.format(new Date().getFullYear()).replace(/٬/g,"") + " " + CONFIG.name;
+
+CONFIG.contact.forEach(([k,v]) => {
+  const dt = document.createElement("dt"), dd = document.createElement("dd");
+  dt.textContent = k; dd.textContent = v; dd.dir = "auto";
+  el("contactInfo").append(dt, dd);
+});
+
+const statsUl = el("stats");
+CONFIG.stats.forEach(s => {
+  const li = document.createElement("li");
+  li.innerHTML = '<div class="num" data-target="' + s.value + '">0</div><div class="lbl"></div>';
+  li.querySelector(".lbl").textContent = s.label;
+  statsUl.appendChild(li);
+});
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+function show(node, n){ node.textContent = nf.format(n) + "+"; }
+function count(node){
+  const target = +node.dataset.target;
+  if (reduce) { show(node, target); return; }
+  const dur = 1800, t0 = performance.now();
+  (function tick(now){
+    const p = Math.min((now - t0) / dur, 1), e = 1 - Math.pow(1 - p, 3);
+    show(node, Math.round(target * e));
+    if (p < 1) requestAnimationFrame(tick);
+  })(t0);
+}
+const nums = document.querySelectorAll(".num");
+if ("IntersectionObserver" in window) {
+  const io = new IntersectionObserver((es, o) => es.forEach(e => {
+    if (e.isIntersecting) { count(e.target); o.unobserve(e.target); }
+  }), { threshold: .5 });
+  nums.forEach(n => io.observe(n));
+} else nums.forEach(count);
+
+const list = el("articleList");
+if (!CONFIG.articles.length) {
+  list.innerHTML = '<div class="empty">لا توجد مقالات بعد. ستظهر المقالات الجديدة هنا.</div>';
+} else {
+  CONFIG.articles.forEach(a => {
+    const c = document.createElement("a");
+    c.className = "card"; c.href = a.url || "#";
+    const d = new Date(a.date).toLocaleDateString("ar", { day: "numeric", month: "long", year: "numeric" });
+    c.innerHTML = '<div class="meta"></div><h3></h3><p></p>';
+    c.querySelector(".meta").textContent = d + " - " + a.author;
+    c.querySelector("h3").textContent = a.title;
+    c.querySelector("p").textContent = a.excerpt;
+    list.appendChild(c);
+  });
+}
+</script>
+</body>
+</html>
